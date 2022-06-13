@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+       
+</head>
+   
+    <title>Login Form</title>    
+       
+</head>    
+<body><center>
+    <div id="header">   
+    <h1>User Login Form</h1>
+</div>    
+    <div id ="middle"> 
+        <h2>Log-in</h2>   
+    <form action="" method="post"> 
+        {% csrf_token %} 
+        
+        <b>User Name:-</b> <input type="emailid" name="emailid"  placeholder="Username" value="{{ucookie}}" required>    
+        <br><br>    
+        <b>Password:- </b> <input type="password" name="password"  placeholder="Password" value="{{pcookie}}" required>    
+        <br><br> 
+        <input type="checkbox" name="chk" value="rem"{% if ucookie %} checked {% endif %}/>Remember me
+        <br><br>   
+        <input type="submit" name="btnsubmit"value="login">       
+        <br><br>    
+            
+        <h2><a href="signup">Click to Register here</a></h2>
+         </center>   
+    </form> 
+    <center>{{res}}</center>   
+</div>
+<div id ="footer">
+ 
+</div>
+
+</body>    
+</html>
